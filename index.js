@@ -8,12 +8,12 @@ const respostas = [
   "E eu que sei é?",
   "Não conte com isso.",
   "Sem dúvidas!",
-  "Me pergunta depois visse.",
+  "Claro! ainda duvida ?.",
   "Sim, definitivamente!",
   "Minha resposta é não.",
   "Você pode contar com isso.",
   "Melhor não te dizer agora.",
-  "Eu nao digo é nada.",
+  "VIXI QUE PERGUNTA DIFICIL, Não faço ideia.",
   "Minhas fontes dizen não.",
   "Provavelmente.",
   "Não é possível prever agora.",
@@ -48,5 +48,22 @@ elementoResposta.innerHTML = pergunta + respostas
 
 setTimeout(function() {
   elementoResposta.style.opacity = 0;
-}, 3000)
+}, 5000)
 }
+
+elementoResposta.addEventListener("transitionend", function () {
+  if (elementoResposta.style.opacity == 0) {
+    elementoResposta.innerHTML = "";
+    elementoResposta.style.opacity = 1;
+    inputPergunta.value = "";
+  }
+});
+
+
+
+
+
+
+
+
+//01101010 01101111 01101110 
